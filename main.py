@@ -1,7 +1,9 @@
 import unittest
 
+
 # An iterator over the fibonacci sequence
 class Fib:
+
     def __init__(self):
         self.a = 1
         self.b = 1
