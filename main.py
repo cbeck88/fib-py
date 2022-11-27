@@ -1,4 +1,3 @@
-import itertools
 import unittest
 
 # An iterator over the fibonacci sequence
@@ -21,7 +20,7 @@ class TestFib(unittest.TestCase):
     # Test the first five numbers of fibonoacci sequence
     def test_five(self):
         fibs = Fib()
-        first_five = itertools.islice(fibs, 5)
+        first_five = [next(fibs) for _ in range(5)]
         self.assertEqual(first_five, [1, 1, 2, 3, 5])
 
 
