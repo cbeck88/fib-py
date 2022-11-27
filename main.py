@@ -5,7 +5,7 @@ import unittest
 class Fib:
 
     def __init__(self):
-        self.a = 1
+        self.a = 0
         self.b = 1
 
     def __iter__(self):
@@ -23,7 +23,7 @@ class TestFib(unittest.TestCase):
     def test_five(self):
         fibs = Fib()
         first_five = [next(fibs) for _ in range(5)]
-        self.assertEqual(first_five, [1, 1, 2, 3, 5])
+        self.assertEqual(first_five, [0, 1, 1, 2, 3])
 
 
 if __name__ == '__main__':
